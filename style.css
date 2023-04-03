@@ -1,0 +1,47 @@
+body {
+  display: flex;
+}
+
+.phone {
+  margin: 30px auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 339px;
+  height: 700px;
+  background-color: #ccc;
+  border-radius: 50px;
+  border: 14px solid rgb(48, 48, 48);
+  box-sizing: border-box;
+}
+
+
+.camera {
+  height: 25px;
+  width: 43%;
+  background-color: rgb(48, 48, 48);
+  display: block;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+
+.screen {
+  background-color: beige;
+  flex-basis: 40%;
+}
+
+/* 2.81 x 5.81 */
+
+.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  box-sizing: content-box;
+  margin: 10px 10px 30px 10px;
+}
+
+button {
+  border: 1px solid #ccc;
+  flex-basis: 25%;
+  align-items: flex-end;
+}
