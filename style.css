@@ -1,47 +1,121 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
+  font-family: sans-serif;
+  margin: 25px;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .phone {
-  margin: 30px auto;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 339px;
-  height: 700px;
-  background-color: #ccc;
+  background: rgb(118, 118, 118);
   border-radius: 50px;
   border: 14px solid rgb(48, 48, 48);
-  box-sizing: border-box;
+  color: white;
+  padding: 0 10px 10px 10px;
+  position: relative;
+  width: 339px;
+  height: 700px;
+  justify-content: center;
+  align-items: center;
 }
+
+.top-display {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  flex-direction: row;
+  justify-items: center;
+  font-size: 15px;
+}
+
 
 
 .camera {
+  display: inline-block;
+  justify-content: center;
   height: 25px;
-  width: 43%;
+  width: 44%;
+  max-width: 210px;
   background-color: rgb(48, 48, 48);
-  display: block;
+  left: 28%;
+  position: absolute; 
   border-bottom-left-radius: 18px;
   border-bottom-right-radius: 18px;
+
+}
+
+.clock {
+  width: 28%;
+}
+
+.date {
+  width: 28%;
 }
 
 .screen {
-  background-color: beige;
-  flex-basis: 40%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: white;
+  height: 35%;
+  margin-right: 10px;
 }
 
-/* 2.81 x 5.81 */
+.current-display {
+  
+  font-size: 70px;
+}
 
 .keyboard {
-  display: flex;
-  flex-wrap: wrap;
-  height: 100%;
-  box-sizing: content-box;
-  margin: 10px 10px 30px 10px;
+  display: grid;
+  width: 100%;
+  height: 55%;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 25% 25% 25% 25%;
+  border: none;
 }
 
 button {
-  border: 1px solid #ccc;
-  flex-basis: 25%;
-  align-items: flex-end;
+  border-radius: 100%;
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+  border: none;
+  font-size: 28px;
+  font-weight: 200;
+}
+
+.span-two {
+  grid-column: span 2;
+  width: 136px;
+  border-radius: 135px;
+  text-align: start;
+  padding-left: 25px;
+
+}
+
+.clear,
+.negative,
+.percent {
+  background-color: #a5a5a5;
+  color: black;
+}
+
+.operator {
+  background-color: #ff9f0a;
+  color: white;
+  font-size: 40px;
+}
+
+.number {
+  background-color: #343434;
+  color: white;
 }
