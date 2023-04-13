@@ -5,54 +5,47 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300&display=swap" rel="stylesheet">
 
   <title>Calculator</title>
 </head>
 <body>
   <div class="phone">
-    <div class="camera"></div>
     <div class="top-display">
       <div class="clock">
         <span class="hour"></span>:<span class="minute"></span>
       </div>
-      <div class="date"></div>
-      <!-- <span class="month"></span> <span class="date"></span>, <span class="year"></span> -->
+      <div class="camera"></div>
+      <div class="status"></div>
     </div>
-    <div class="screen">
-      <div class="previous-display"></div>
-      <div class="current-display">0</div>
-    </div>
+    <div class="display">0</div>
     <div class="keyboard">
-      <button class="clear" value="AC">AC</button>
-      <button class="negative" value="-">±</button>
-      <button class="percent" value="%">%</button>
+      <button class="btn clear" value="AC">AC</button>
+      <button class="btn negative" value="-">±</button>
+      <button class="btn percent" value="%">%</button>
       <button class="operator" value="/">÷</button>
 
-      <button class="number" value="7">7</button>
-      <button class="number" value="8">8</button>
-      <button class="number" value="9">9</button>
+      <button class="btn number" value="7">7</button>
+      <button class="btn number" value="8">8</button>
+      <button class="btn number" value="9">9</button>
       <button class="operator" value="*">×</button>
 
-      <button class="number" value="4">4</button>
-      <button class="number" value="5">5</button>
-      <button class="number" value="6">6</button>
+      <button class="btn number" value="4">4</button>
+      <button class="btn number" value="5">5</button>
+      <button class="btn number" value="6">6</button>
       <button class="operator" value="-">−</button>
 
-      <button class="number" value="1">1</button>
-      <button class="number" value="2">2</button>
-      <button class="number" value="3">3</button>
+      <button class="btn number" value="1">1</button>
+      <button class="btn number" value="2">2</button>
+      <button class="btn number" value="3">3</button>
       <button class="operator" value="+">+</button>
 
-      <button class="number span-two" value="0">0</button>
-      <button class="number" value=".">.</button>
-      <button class="operator" value="=">=</button>
+      <button class="btn number span-two" value="0">0</button>
+      <button class="btn number" value=".">.</button>
+      <button class="btn equals" value="=">=</button>
     </div>
+    <div class="bottom"></div>
   </div>
-  
-  </div>
+
 
   <script src="app.js"></script>
 </body>
