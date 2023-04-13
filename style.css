@@ -94,7 +94,6 @@ body {
 
 button {
   align-items: center;
-  /* background: #333; */
   border-radius: 50%;
   cursor: pointer;
   display: flex;
@@ -145,19 +144,35 @@ button {
   color: white;
 }
 
-.btn {
-  transition: font-size 0.6s, filter 0.6s;
-
+.clear,
+.negative,
+.percent,
+.number,
+.decimal,
+.equals {
+  transition: font-size 0.1s, filter cubic-bezier(0, 0.5, 1, 1) 2s;
+  
 }
 
-.btn:focus {
+.clear:active,
+.negative:active,
+.percent:active {
+  /* filter: brightness(150%); */
   filter: brightness(130%);
+  transition-duration: 100ms;
 }
 
-.btn:active {
-  font-size: 45px;
+.number:active,
+.decimal:active {
+  font-size: 35px;
+  filter: brightness(180%);
+  transition-duration: 100ms;
 }
 
+.equals:active {
+  filter: brightness(120%);
+  transition-duration: 100ms;
+}
 
 
 .bottom {
