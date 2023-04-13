@@ -73,14 +73,15 @@ body {
   word-break: break-all;
 }
 
-.display {
+.value {
   font-size: 70px;
   font-weight: 300;
   height: 100px;
-  padding: 10px;
+  padding-right: 10px;
   text-align: right;
-  word-wrap: break-word;
-  word-break: break-all;
+  overflow: auto
+  /* word-wrap: break-word;
+  word-break: break-all; */
 }
 
 
@@ -138,7 +139,8 @@ button {
   
 }
 
-.number {
+.number,
+.decimal {
   background-color: #343434;
   color: white;
 }
