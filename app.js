@@ -1,6 +1,6 @@
 // get time
-const hourEl = document.querySelector('.hour');
-const minuteEl = document.querySelector('.minute');
+const hour = document.querySelector('.hour');
+const minute = document.querySelector('.minute');
 
 const updateTime = () => {
   const currentTime = new Date();
@@ -11,8 +11,8 @@ const updateTime = () => {
   if (currentHour > 12) {
     currentHour -= 12;
   }
-  hourEl.textContent = currentHour.toString();
-  minuteEl.textContent = currentMinute.toString().padStart(2, '0');
+  hour.textContent = currentHour.toString();
+  minute.textContent = currentMinute.toString().padStart(2, '0');
 }
 setInterval(updateTime, 1000);
 updateTime();
@@ -31,10 +31,12 @@ const equalsBtn = document.querySelector('.equals');
 let previousValue = null;
 let previousOperator = null;
 
+// gets value from string
 function getValueAsString() {
   return value.textContent.split(',').join('');
 }
 
+// converts value to num
 function getValueAsNum() {
   return parseFloat(getValueAsString());
 }
@@ -107,7 +109,7 @@ function chooseOperation (operator) {
 
 
 
-// Add event listener for buttons, convert number to string 
+// Add event listener for buttons
 numberBtn.forEach(button => {
   button.addEventListener('click', () => {
     displayNumber(button.innerText.toString());

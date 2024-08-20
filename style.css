@@ -11,7 +11,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: "Helvetica Neue", sans-serif;
 }
 
 .phone {
@@ -23,18 +23,16 @@ body {
   width: 339px;
   height: 700px;
   position: relative;
-  
 }
 
 .top-display {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 160px;
+  /* height: 160px; */
   padding: 0 20px;
+  /* background-color: #a5a5a5; */
 }
-
-
 
 .camera {
   display: inline-block;
@@ -44,7 +42,7 @@ body {
   width: 44%;
   max-width: 210px;
   background-color: rgb(48, 48, 48);
-  position: relative; 
+  position: relative;
   border-bottom-left-radius: 18px;
   border-bottom-right-radius: 18px;
   top: 0;
@@ -76,14 +74,22 @@ body {
 .value {
   font-size: 70px;
   font-weight: 300;
-  height: 100px;
+  height: 250px;
+  /* width: 100%; */
+  width: 290px;
+  /* background-color: wheat; */
   padding-right: 10px;
   text-align: right;
-  overflow: auto
-  /* word-wrap: break-word;
-  word-break: break-all; */
+  overflow-wrap: break-word;
+  word-break: break-all;
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
 }
 
+.value > p {
+  /* font-size: clamp(1rem, 1.25vw, 1.25rem); */
+}
 
 .keyboard {
   display: grid;
@@ -135,7 +141,6 @@ button {
 .operator:focus {
   background-color: white;
   color: #ff9f0a;
-  
 }
 
 .number,
@@ -150,22 +155,32 @@ button {
 .number,
 .decimal,
 .equals {
-  transition: font-size 0.1s, filter cubic-bezier(0, 0.5, 1, 1) 2s;
-  
+  transition: font-size 0.5s ease-out, filter cubic-bezier(0, 0.5, 1, 1) 2s;
 }
 
 .clear:active,
 .negative:active,
 .percent:active {
-  /* filter: brightness(150%); */
   filter: brightness(130%);
+  transition-duration: 100ms;
+}
+
+.clear:focus,
+.negative:focus,
+.percent:focus {
+  font-size: 30px;
   transition-duration: 100ms;
 }
 
 .number:active,
 .decimal:active {
-  font-size: 35px;
   filter: brightness(180%);
+  transition-duration: 100ms;
+}
+
+.number:focus,
+.decimal:focus {
+  font-size: 35px;
   transition-duration: 100ms;
 }
 
@@ -174,6 +189,10 @@ button {
   transition-duration: 100ms;
 }
 
+.equals:focus {
+  font-size: 150;
+  transition-duration: 100ms;
+}
 
 .bottom {
   width: 100px;
